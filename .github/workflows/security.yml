@@ -39,7 +39,7 @@ jobs:
         run: |
           docker run --rm -v ${{ github.workspace }}://repo \
             zricethezav/gitleaks:v8.30.0 \
-            detect --source"/repo" --no-git --verbose --exit-code=1
+            detect --source="/repo" --no-git --verbose --exit-code=1
 
   docker-config:
     name: Trivy - Docker/Config
