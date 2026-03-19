@@ -12,7 +12,7 @@
 </form>
 
 <?php if (isset($_GET['q'])): ?>
-    <h3>Resultats pour : <?php echo $_GET['q']; ?></h3>
+    <h3>Resultats pour : <?php echo htmlspecialchars($_GET['q'], ENT_QUOTES, 'UTF-8'); ?></h3>
     <?php if ($results && mysqli_num_rows($results) > 0): ?>
         <table>
             <tr><th>ID</th><th>Nom</th><th>Date de naissance</th></tr>
